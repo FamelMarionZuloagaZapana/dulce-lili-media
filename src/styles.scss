@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+/* Archivo de entrada global: solo expone los tokens de diseño. */
+@forward './components/tokens';
+
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PrimeNG 17 Styles */
+@import 'primeng/resources/themes/lara-light-blue/theme.css';
+@import 'primeng/resources/primeng.min.css';
+@import 'primeicons/primeicons.css';
+
