@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: dulcelili-backend
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start:prod
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      # Agrega tus variables de entorno aquí después de desplegar
+      # - key: FIREBASE_SERVICE_ACCOUNT
+      #   value: "tu-json-aqui"
+      # - key: SMTP_HOST
+      #   value: smtp.gmail.com
+      # - key: SMTP_PORT
+      #   value: 587
+      # - key: SMTP_USER
+      #   value: tu-email@gmail.com
+      # - key: SMTP_PASSWORD
+      #   value: tu-app-password
+      # - key: ADMIN_EMAIL
+      #   value: admin@dulcelilimedia.com
+      # - key: FRONTEND_URL
+      #   value: https://tu-frontend.netlify.app
