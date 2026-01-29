@@ -1,10 +1,6 @@
 {
   "name": "frontend",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
-  "private": true,
-  "license": "UNLICENSED",
   "scripts": {
     "build": "ng build --configuration production",
     "start": "ng serve",
@@ -27,6 +23,7 @@
     "zone.js": "^0.14.10"
   },
   "devDependencies": {
+    "@angular/build": "^18.0.0",  // ¡ACTUALIZA ESTO!
     "@angular-devkit/build-angular": "^18.0.0",
     "@angular/cli": "^18.0.0",
     "@angular/compiler-cli": "^18.0.0",
