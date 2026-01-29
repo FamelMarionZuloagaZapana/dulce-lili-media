@@ -27,10 +27,9 @@ export interface ReclamoResponse {
   providedIn: 'root'
 })
 export class ReclamoService {
-  // Usar proxy en desarrollo, URL completa en producción
   private apiUrl = window.location.hostname === 'localhost' 
-    ? '/api/reclamos'  // Usa proxy en desarrollo
-    : 'https://dulce-lili-media-2.onrender.com/api/reclamos';  // URL completa en producción 
+    ? '/api/reclamos'  
+    : 'https://dulce-lili-media-2.onrender.com/api/reclamos'; 
 
   constructor(
     private http: HttpClient,
