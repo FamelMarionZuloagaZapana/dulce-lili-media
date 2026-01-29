@@ -13,7 +13,10 @@ export interface LoginResponse {
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = '/api/auth';
+  // Usar proxy en desarrollo, URL completa en producción
+  private apiUrl = window.location.hostname === 'localhost' 
+    ? '/api/auth'  // Usa proxy en desarrollo
+    : 'https://dulce-lili-media-2.onrender.com/api/auth';  // URL completa en producción
   private tokenKey = 'auth_token';
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(this.hasValidToken());
   public isAuthenticated$ = this.isAuthenticatedSubject.asObservable();

@@ -27,7 +27,10 @@ export interface ReclamoResponse {
   providedIn: 'root'
 })
 export class ReclamoService {
-  private apiUrl = 'http://localhost:3000/api/reclamos'; // Cambia esto por la URL de tu backend en producción
+  // Usar proxy en desarrollo, URL completa en producción
+  private apiUrl = window.location.hostname === 'localhost' 
+    ? '/api/reclamos'  // Usa proxy en desarrollo
+    : 'https://dulce-lili-media-2.onrender.com/api/reclamos';  // URL completa en producción 
 
   constructor(
     private http: HttpClient,
