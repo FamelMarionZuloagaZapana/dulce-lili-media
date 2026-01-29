@@ -1,0 +1,12 @@
+:host ::ng-deep {
+  .autocomplete-container {
+    flex: 0 1 auto !important;
+    width: calc(100% - 20px) !important;
+    max-width: calc(100% - 20px) !important;
+    
+    @media (min-width: 768px) {
+      width: calc(384px - 20px) !important;
+      max-width: calc(384px - 20px) !important;
+    }
+  }
+}
