@@ -1,7 +1,6 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { ButtonComponent } from '../../components/buttons/buttons.component';
 import { CalendarModule } from 'primeng/calendar';
 import { CardModule } from "primeng/card";
@@ -18,8 +17,9 @@ import { ubigeoData, Departamento, Provincia, Distrito } from './ubigeo.types';
 @Component({
     selector: 'app-reclamo',
     standalone: true,
-    imports: [CommonModule, FormsModule, HttpClientModule, ButtonComponent, CalendarModule, CardModule, InputTextModule, InputTextareaModule, DropdownModule, CheckboxModule, ConfirmacionDialogComponent, FinalizarDialogComponent],
-    templateUrl: './reclamo.component.html'
+    imports: [CommonModule, FormsModule, ButtonComponent, CalendarModule, CardModule, InputTextModule, InputTextareaModule, DropdownModule, CheckboxModule, ConfirmacionDialogComponent, FinalizarDialogComponent],
+    templateUrl: './reclamo.component.html',
+    styleUrls: ['./reclamo.component.scss']
 })
 
 export class ReclamoComponent implements OnInit {

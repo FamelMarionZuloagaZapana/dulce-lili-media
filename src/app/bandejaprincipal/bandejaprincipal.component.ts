@@ -1,7 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { CardModule } from 'primeng/card';
 import { ButtonComponent } from '../../components/buttons/buttons.component';
 import { AutoCompleteModule } from 'primeng/autocomplete';
@@ -35,7 +34,7 @@ interface Reclamo {
   standalone: true,
   templateUrl: './bandejaprincipal.component.html',
   styleUrls: ['./bandejaprincipal.component.scss'],
-  imports: [CommonModule, FormsModule, HttpClientModule, CardModule, ButtonComponent, AutoCompleteModule, RouterModule]
+  imports: [CommonModule, FormsModule,  CardModule, ButtonComponent, AutoCompleteModule, RouterModule]
 })
 export class BandejaPrincipalComponent implements OnInit {
   selectedItem: string = '';

@@ -14,6 +14,7 @@ import { of } from 'rxjs';
   selector: 'app-inicio-sesion',
   standalone: true,
   templateUrl: './inicio-sesion.component.html',
+  styleUrls: ['./inicio-sesion.component.scss'],
   imports: [CommonModule, FormsModule, CardModule, InputTextModule, ButtonComponent, RouterModule]
 })
 export class InicioSesionComponent {

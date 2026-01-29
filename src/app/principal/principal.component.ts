@@ -5,12 +5,14 @@ import { CardModule } from 'primeng/card';
 import { ButtonComponent } from '../../components/buttons/buttons.component';
 import { Router } from '@angular/router';
 import { InicioSesionComponent } from '../inicio-sesion/inicio-sesion.component';
+import { TerminoscondicionesComponent } from './terminoscondiciones/terminoscondiciones.component';
 
 @Component({
   standalone: true,
   selector: 'app-principal',
   templateUrl: './principal.component.html',
-  imports: [CommonModule, RouterModule, CardModule, ButtonComponent]
+  styleUrls: ['./principal.component.scss'],
+  imports: [CommonModule, RouterModule, CardModule, ButtonComponent, TerminoscondicionesComponent]
 })
 export class PrincipalComponent {
 
