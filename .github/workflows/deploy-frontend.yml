@@ -37,7 +37,7 @@ jobs:
         working-directory: ./frontend
         run: |
           # Si hay dominio personalizado configurado, usa baseHref="/", sino usa "/dulce-lili-media/"
-          if [ -f "CNAME" ] && [ -s "CNAME" ]; then
+          if [ -f "public/CNAME" ] && [ -s "public/CNAME" ]; then
             npm run build -- --base-href="/"
           else
             npm run build -- --base-href="/dulce-lili-media/"
