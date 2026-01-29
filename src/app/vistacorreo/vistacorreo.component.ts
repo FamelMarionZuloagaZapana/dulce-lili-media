@@ -29,7 +29,6 @@ interface Reclamo {
   selector: 'app-vistacorreo',
   standalone: true,
   templateUrl: './vistacorreo.component.html',
-  styleUrls: ['./vistacorreo.component.scss'],
   imports: [CommonModule, RouterModule, CardModule, ButtonComponent]
 })
 export class VistacorreoComponent implements OnInit {

@@ -19,8 +19,7 @@ import { ubigeoData, Departamento, Provincia, Distrito } from './ubigeo.types';
     selector: 'app-reclamo',
     standalone: true,
     imports: [CommonModule, FormsModule, HttpClientModule, ButtonComponent, CalendarModule, CardModule, InputTextModule, InputTextareaModule, DropdownModule, CheckboxModule, ConfirmacionDialogComponent, FinalizarDialogComponent],
-    templateUrl: './reclamo.component.html',
-    styleUrls: ['./reclamo.component.scss']
+    templateUrl: './reclamo.component.html'
 })
 
 export class ReclamoComponent implements OnInit {

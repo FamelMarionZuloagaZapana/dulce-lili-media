@@ -10,7 +10,7 @@ import { TooltipModule } from 'primeng/tooltip';
   imports: [CommonModule, TooltipModule]
 })
 export class ButtonComponent {
-  @Input() design: 'primary' | 'secondary' | 'tertiary' | 'success' | 'error' | 'warning' | 'info' | 'no-border-blue' | 'no-border-black' | 'blue-light' = 'primary';
+  @Input() design: 'primary' | 'secondary' | 'no-border-blue' = 'primary';
   @Input() size: 'medium' | 'small' | 'large' = 'medium';
   @Input() tooltip: string = '';
   @Input() fullWidth: boolean = false;

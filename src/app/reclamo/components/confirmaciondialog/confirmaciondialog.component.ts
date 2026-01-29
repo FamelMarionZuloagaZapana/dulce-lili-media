@@ -18,8 +18,7 @@ export interface DialogConfig {
   selector: 'app-confirmacion-dialog',
   standalone: true,
   imports: [CommonModule, DialogModule, ButtonComponent],
-  templateUrl: './confirmaciondialog.component.html',
-  styleUrls: ['./confirmaciondialog.component.scss']
+  templateUrl: './confirmaciondialog.component.html'
 })
 export class ConfirmacionDialogComponent {
   visible: boolean = false;

@@ -10,7 +10,6 @@ import { InicioSesionComponent } from '../inicio-sesion/inicio-sesion.component'
   standalone: true,
   selector: 'app-principal',
   templateUrl: './principal.component.html',
-  styleUrls: ['./principal.component.scss'],
   imports: [CommonModule, RouterModule, CardModule, ButtonComponent]
 })
 export class PrincipalComponent {
