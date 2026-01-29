@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://dulce-lili-media-2.onrender.com",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

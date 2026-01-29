@@ -1,0 +1,11 @@
+<button [pTooltip]="tooltipContent" (click)="handleClick()"  [tooltipDisabled]="tooltip == '' || disabled" tooltipPosition="bottom"
+  [ngClass]="[design, size, fullWidth ? 'w-full flex items-center justify-center' : '']" class="flex items-center gap-2"
+  [disabled]="disabled">
+  <img *ngIf="iconLeft != null && loading == false" [src]="iconLeft" alt="icono del boton">
+  <ng-content></ng-content>
+  <img *ngIf="iconRight != null && loading == false" [src]="iconRight" alt="icono del boton">
+  <img *ngIf="loading" src="/assets/icons/loading.svg" alt="Cargando...">
+</button>
+<ng-template #tooltipContent disabled>
+  <p class="text-balance text-center">{{tooltip}}</p>
+</ng-template>
