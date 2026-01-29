@@ -13,6 +13,7 @@ async function bootstrap() {
     'https://musical-starlight-984413.netlify.app',
     'https://dulcelilimedia.com',
     'https://www.dulcelilimedia.com',
+    'https://famelmarionzuloagazapana.github.io',  // GitHub Pages
   ]);
 
   app.enableCors({
@@ -22,8 +23,9 @@ async function bootstrap() {
 
       const normalized = origin.replace(/\/$/, '');
       const isNetlifyApp = normalized.endsWith('.netlify.app');
+      const isGitHubPages = normalized.includes('.github.io');
       const isLocalhost = normalized.startsWith('http://localhost:') || normalized.startsWith('http://127.0.0.1:');
-      const allowed = allowedOrigins.has(normalized) || isNetlifyApp || isLocalhost;
+      const allowed = allowedOrigins.has(normalized) || isNetlifyApp || isGitHubPages || isLocalhost;
 
       // Importante: si es allowed, devolvemos el origin para que se setee Access-Control-Allow-Origin.
       return allowed ? callback(null, normalized) : callback(null, false);
