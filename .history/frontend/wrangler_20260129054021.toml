@@ -1,0 +1,11 @@
+# Cloudflare Pages configuration
+# Este archivo es opcional, Cloudflare Pages detecta Angular automáticamente
+
+[build]
+command = "npm install --legacy-peer-deps && npm run build"
+cwd = "."
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200

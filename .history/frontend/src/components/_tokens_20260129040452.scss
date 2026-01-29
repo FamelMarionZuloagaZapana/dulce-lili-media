@@ -1,0 +1,38 @@
+:root {
+  /* Colores de marca base (ajustables) */
+  --color-primary: #111827; /* texto principal */
+  --color-secondary: #4b5563; /* texto secundario */
+  --color-accent: #F78EA2; /* acento (rosa) */
+  --color-accent-soft: #F9EEF0; /* fondo suave de acento */
+  --color-gray: #757575;
+
+  --color-background: #F9F6F6; /* fondo general */
+  --color-surface: #ffffff; /* tarjetas / contenedores */
+  --color-border: #e5e7eb;
+  --color-border-strong: #d1d5db;
+
+
+  /* Colores para botones - Azul */
+  --blue-10: #e6f2ff;
+  --blue-20: #b3d9ff;
+  --blue-60: #0066cc;
+  --blue-70: #0052a3;
+  --blue-80: #003d7a;
+
+
+
+
+
+ 
+
+  /* Tipografía */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+
+  /* Radios / sombras */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+

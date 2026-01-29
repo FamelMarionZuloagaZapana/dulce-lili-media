@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@angular/animations": "^17.3.12",
+    "@angular/cli": "^17.3.17",
+    "@angular/common": "^17.3.12",
+    "@angular/compiler": "^17.3.12",
+    "@angular/core": "^17.3.12",
+    "@angular/forms": "^17.3.12",
+    "@angular/platform-browser": "^17.3.12",
+    "@angular/router": "^17.3.12",
+    "primeicons": "^7.0.0",
+    "primeng": "^17.18.15"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.3.17",
+    "@angular/compiler-cli": "^17.3.12",
+    "typescript": "5.2"
+  }
+}
