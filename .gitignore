@@ -1,1 +1,10 @@
 node_modules
+dist
+.angular
+out-tsc
+*.log
+.DS_Store
+.env
+.env.local
+.env.save
+.history
