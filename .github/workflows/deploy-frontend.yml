@@ -35,7 +35,13 @@ jobs:
 
       - name: Build
         working-directory: ./frontend
-        run: npm run build -- --base-href="/dulce-lili-media/"
+        run: |
+          # Si hay dominio personalizado configurado, usa baseHref="/", sino usa "/dulce-lili-media/"
+          if [ -f "CNAME" ] && [ -s "CNAME" ]; then
+            npm run build -- --base-href="/"
+          else
+            npm run build -- --base-href="/dulce-lili-media/"
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
