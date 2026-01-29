@@ -11,10 +11,10 @@ import { TerminoscondicionesComponent } from './terminoscondiciones/terminoscond
   standalone: true,
   selector: 'app-principal',
   templateUrl: './principal.component.html',
-  styleUrls: ['./principal.component.scss'],
   imports: [CommonModule, RouterModule, CardModule, ButtonComponent, TerminoscondicionesComponent]
 })
 export class PrincipalComponent {
+  constructor(private router: Router) {}
 
   irInicio() {
     this.router.navigate(['/inicio-sesion']).then(
@@ -22,8 +22,6 @@ export class PrincipalComponent {
       (error) => console.error('Error en navegación:', error)
     );
   }
-
-  constructor(private router: Router) {}
   
   iniciarReclamo() {
     console.log('iniciarReclamo llamado');
