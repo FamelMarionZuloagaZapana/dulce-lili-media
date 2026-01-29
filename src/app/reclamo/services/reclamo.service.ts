@@ -27,7 +27,7 @@ export interface ReclamoResponse {
   providedIn: 'root'
 })
 export class ReclamoService {
-  private apiUrl = 'http://localhost:3000/api/reclamos'; // Cambia esto por la URL de tu backend en producción
+  private apiUrl = 'https://dulce-lili-media-2.onrender.com/api/reclamos';
 
   constructor(
     private http: HttpClient,
