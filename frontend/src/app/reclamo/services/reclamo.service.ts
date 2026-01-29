@@ -29,7 +29,7 @@ export interface ReclamoResponse {
 export class ReclamoService {
   private apiUrl = window.location.hostname === 'localhost' 
     ? '/api/reclamos'  
-    : 'https://dulce-lili-media-2.onrender.com/api/reclamos'; 
+    : 'https://dulce-lili-media-1.onrender.com/api/reclamos'; 
 
   constructor(
     private http: HttpClient,
