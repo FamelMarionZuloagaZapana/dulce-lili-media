@@ -14,6 +14,7 @@ module.exports = {
         accent: 'var(--color-accent)',
         'accent-soft': 'var(--color-accent-soft)',
         bg: 'var(--color-bg)',
+        background: 'var(--color-background)',
         surface: 'var(--color-surface)',
         border: 'var(--color-border)',
         'border-strong': 'var(--color-border-strong)',

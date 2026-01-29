@@ -1,0 +1,107 @@
+<div class="bg-accent min-h-screen w-full">
+    <p-card styleClass="m-4 md:m-8">
+        <!-- Logo -->
+        <div class="mb-4">
+            <img src="/assets/images/logo.svg" alt="logo" class="w-32 h-8 md:w-32 md:h-10">
+        </div>
+
+        <!-- Banner con título -->
+        <div class="flex justify-center items-center bg-accent border-[1px] border-gray-100 rounded-lg p-4 h-16 md:h-24 w-full mb-6">
+            <h1 class="font-bold font-sans text-xl md:text-3xl lg:text-4xl text-white">Detalle del Reclamo</h1>
+        </div>
+
+        <!-- Botón de regreso -->
+        <div class="mb-6">
+            <app-button design="primary" size="large" iconLeft="/assets/icons/Arrowleftcircle.svg" (onClick)="volverABandeja()">
+                Volver a Bandeja
+            </app-button>
+        </div>
+
+        <!-- Contenido del reclamo -->
+        <div *ngIf="isLoading" class="text-center py-8">
+            <p class="text-gray-500">Cargando reclamo...</p>
+        </div>
+
+        <div *ngIf="error" class="text-center py-8">
+            <p class="text-red-500">{{ error }}</p>
+            <app-button design="primary" size="large" (onClick)="volverABandeja()" styleClass="mt-4">
+                Volver a Bandeja
+            </app-button>
+        </div>
+
+        <div *ngIf="reclamo && !isLoading" class="space-y-6">
+            <!-- Información del Cliente -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Información del Cliente</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Nombre Completo</label>
+                        <p class="text-gray-900 text-base">{{ reclamo.nombreCompleto }}</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Tipo de Documento</label>
+                        <p class="text-gray-900 text-base">{{ reclamo.tipoDocumento || 'No especificado' }}</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Número de Documento</label>
+                        <p class="text-gray-900 text-base">{{ reclamo.numeroDocumento || 'No especificado' }}</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Teléfono</label>
+                        <p class="text-gray-900 text-base">{{ reclamo.telefono || 'No especificado' }}</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Correo Electrónico</label>
+                        <p class="text-gray-900 text-base">{{ reclamo.correo || 'No especificado' }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ubicación -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Ubicación</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Departamento</label>
+                        <p class="text-gray-900 text-base">{{ reclamo.departamento || 'No especificado' }}</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Provincia</label>
+                        <p class="text-gray-900 text-base">{{ reclamo.provincia || 'No especificado' }}</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Distrito</label>
+                        <p class="text-gray-900 text-base">{{ reclamo.distrito || 'No especificado' }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información del Reclamo -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Información del Reclamo</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Tipo de Reclamación</label>
+                        <p class="text-gray-900 text-base">{{ reclamo.tipoReclamacion }}</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Fecha y Hora</label>
+                        <p class="text-gray-900 text-base">{{ reclamo.fecha }} - {{ reclamo.hora }}</p>
+                    </div>
+                    <div *ngIf="reclamo.pedidoConsumidor" class="md:col-span-2">
+                        <label class="block text-sm font-medium text-gray-600 mb-1">Pedido/Consumidor</label>
+                        <p class="text-gray-900 text-base">{{ reclamo.pedidoConsumidor }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detalle del Reclamo -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">Detalle del Reclamo</h3>
+                <div class="bg-gray-50 rounded-lg p-4 min-h-[150px]">
+                    <p class="text-gray-900 whitespace-pre-wrap text-base leading-relaxed">{{ reclamo.detalle || 'No hay detalle disponible' }}</p>
+                </div>
+            </div>
+        </div>
+    </p-card>
+</div>
