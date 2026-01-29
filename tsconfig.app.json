@@ -7,9 +7,23 @@
     "types": []
   },
   "include": [
-    "src/**/*.ts"
+    "src/main.ts",
+    "src/app/**/*.ts",
+    "src/components/**/*.ts"
   ],
   "exclude": [
-    "src/**/*.spec.ts"
+    "src/**/*.spec.ts",
+    "src/reclamos/**/*",
+    "src/auth/auth.controller.ts",
+    "src/auth/auth.guard.ts",
+    "src/auth/auth.module.ts",
+    "src/auth/auth.service.ts",
+    "src/auth/dto/**/*",
+    "src/email/**/*",
+    "src/firebase/**/*",
+    "src/app.controller.ts",
+    "src/app.controller.spec.ts",
+    "src/app.module.ts",
+    "src/app.service.ts"
   ]
 }

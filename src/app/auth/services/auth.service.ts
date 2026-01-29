@@ -13,7 +13,7 @@ export interface LoginResponse {
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3000/api/auth';
+  private apiUrl = 'https://dulce-lili-media-2.onrender.com/api/auth';
   private tokenKey = 'auth_token';
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(this.hasValidToken());
   public isAuthenticated$ = this.isAuthenticatedSubject.asObservable();
