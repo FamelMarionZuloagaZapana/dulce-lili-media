@@ -9,7 +9,12 @@ async function bootstrap() {
   const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:4200';
   app.enableCors({
     origin: process.env.NODE_ENV === 'production' 
-      ? [frontendUrl, 'https://dulcelilimedia.com', 'https://www.dulcelilimedia.com']
+      ? [
+          frontendUrl, 
+          'https://musical-starlight-984413.netlify.app',
+          'https://dulcelilimedia.com', 
+          'https://www.dulcelilimedia.com'
+        ]
       : true, // Permite cualquier origen en desarrollo
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
